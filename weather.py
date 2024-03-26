@@ -15,7 +15,13 @@ if __name__ == "__main__":
 
   city = input("\nPlease enter a city name:\n")
 
+  # Check for empty strings
+  if not bool(city.strip()):
+    city = "Kansas City"
+
   weatherData = getWeather(city)
 
   print("\n")
   pprint(weatherData)
+
+
